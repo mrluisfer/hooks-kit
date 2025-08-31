@@ -1,0 +1,58 @@
+{
+    "name": "hooks-kit",
+    "version": "0.1.0",
+    "description": "A collection of modern, useful and server-safe React hooks",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "npx tsc",
+        "format": "npx prettier --write ."
+    },
+    "keywords": [
+        "react",
+        "react-hooks",
+        "custom-hooks",
+        "hooks",
+        "use-hooks",
+        "react-use",
+        "react-utils",
+        "utilities",
+        "frontend",
+        "javascript",
+        "typescript",
+        "performance",
+        "state-management",
+        "ui",
+        "web",
+        "web-development",
+        "developer-tools",
+        "productivity",
+        "helper",
+        "optimization",
+        "low-end-devices"
+    ],
+    "author": "mrluisfer",
+    "license": "MIT",
+    "repository": {
+        "directory": "mrluisfer/hooks-kit",
+        "type": "git",
+        "url": "https://github.com/mrluisfer/hooks-kit"
+    },
+    "private": false,
+    "type": "module",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "devDependencies": {
+        "@types/react": "^19.1.12",
+        "@types/react-dom": "^19.1.9",
+        "prettier": "3.6.2",
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1",
+        "typescript": "^5.9.2"
+    },
+    "engines": {
+        "node": ">=22"
+    }
+}
