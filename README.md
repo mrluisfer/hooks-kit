@@ -2,7 +2,7 @@
 
 A collection of modern, useful and server-safe React hooks
 
-### References
+## References
 
 - [uidotdev/usehooks](https://github.com/uidotdev/usehooks)
 - [react/hooks](https://react.dev/reference/react/hooks)
