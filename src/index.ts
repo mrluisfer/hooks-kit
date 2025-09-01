@@ -6,6 +6,7 @@ import { useToggle } from './hooks/useToggle.js';
 import { useUniqueIds } from './hooks/useUniqueIds.js';
 import { useHover } from './hooks/useHover.js';
 import { useDeviceResources } from './hooks/useDeviceResources.js';
+import { useDeviceDebounced, useDevice } from './hooks/useDevice.js';
 
 export {
     useCopyToClipboard,
@@ -16,4 +17,6 @@ export {
     useUniqueIds,
     useHover,
     useDeviceResources,
+    useDevice,
+    useDeviceDebounced,
 };
