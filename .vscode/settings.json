@@ -1,4 +1,16 @@
 {
-    "cSpell.words": ["heur", "longtask", "Mbps"],
+    "cSpell.words": [
+        "chargingchange",
+        "chargingtimechange",
+        "dischargingtimechange",
+        "heur",
+        "levelchange",
+        "longtask",
+        "Mbps",
+        "onchargingchange",
+        "onchargingtimechange",
+        "ondischargingtimechange",
+        "onlevelchange"
+    ],
     "biome.enabled": false
 }
