@@ -44,5 +44,13 @@
         "forceConsistentCasingInFileNames": true,
         "noImplicitAny": true,
         "allowJs": true
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "/main.jsx",
+        "/index.html",
+        "/vite.config.js",
+        "/tailwind.config.js"
+    ]
 }
