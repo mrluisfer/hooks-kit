@@ -10,7 +10,7 @@
         "dev:web": "vite",
         "preview:web": "vite preview",
         "build:web": "vite build --outDir dist/",
-        "deploy": "npm run format && npm run build && npm run deploy:web"
+        "deploy": "npm run format && npm run build && npm run build:web"
     },
     "keywords": [
         "react",
