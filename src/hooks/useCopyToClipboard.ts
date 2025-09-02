@@ -35,7 +35,8 @@ export function useCopyToClipboard() {
             }
         };
 
-        handleCopy();
+        // Add missing return statement to copyToClipboard utility
+        return handleCopy();
     }, []);
 
     return [state, copyToClipboard, isCopied, setIsCopied] as const;
