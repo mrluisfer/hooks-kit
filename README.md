@@ -14,3 +14,4 @@ A collection of modern, useful and server-safe React hooks
 - [Battery Status API - W3C Editor's Draft 24 October 2024](https://w3c.github.io/battery/#dom-navigator-getbattery)
 - [Navigator: getBattery() method](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery)
 - [Fix Tailwind CSS Intellisense in VS Code (CDN Users)](https://www.youtube.com/watch?v=fODz-vDkEac)
+- [Deploying Vite Apps to GitHub Pages](https://vite.dev/guide/static-deploy.html#github-pages)
