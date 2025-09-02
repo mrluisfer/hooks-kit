@@ -9,7 +9,7 @@
         "format": "npx prettier --write .",
         "dev:web": "vite",
         "preview:web": "vite preview",
-        "build:web": "vite build --outDir docs/"
+        "build:web": "vite build --outDir dist/"
     },
     "keywords": [
         "react",
