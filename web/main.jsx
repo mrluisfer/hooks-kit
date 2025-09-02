@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import './main.css';
+import { useCopyToClipboard } from '../src/index.js';
 
 const AppLogo = (props) => (
     <svg
@@ -48,15 +49,21 @@ function HighlightedText({ children, as = 'div', className = '' }) {
 
     return (
         <Component
-            className={`text-zinc-200 font-semibold group-hover:text-zinc-50 transition-colors ${className}`}
+            className={`text-zinc-300 hover:text-zinc-50 transition-colors ${className}`}
         >
             {children}
         </Component>
     );
 }
 
-function Container({ children }) {
-    return <div className="max-w-7xl container mx-auto">{children}</div>;
+function Container({ children, className = '' }) {
+    return (
+        <div
+            className={`max-w-5xl xl:max-w-7xl container mx-auto ${className}`}
+        >
+            {children}
+        </div>
+    );
 }
 
 function Header() {
@@ -88,18 +95,62 @@ function Header() {
     );
 }
 
+function NpmCommand() {
+    const [value, copyToClipboard, isCopied, setIsCopied] =
+        useCopyToClipboard();
+
+    React.useEffect(() => {
+        if (isCopied) {
+            const timer = setTimeout(() => {
+                setIsCopied(false);
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
+    }, [isCopied, setIsCopied]);
+
+    return (
+        <section className="flex items-center justify-between w-2/4 px-6 bg-zinc-800 py-4 rounded-xl my-8">
+            <div className="flex items-center justify-start gap-3">
+                <span className="text-2xl font-mono text-blue-400 select-none">
+                    {'>'}
+                </span>
+                <p className="font-mono text-3xl">npm i hooks-kit</p>
+            </div>
+            <button
+                type="button"
+                className={`inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-all shadow-md hover:shadow-lg cursor-pointer select-none
+                ${isCopied ? 'bg-green-500 hover:bg-green-600' : 'bg-blue-500 hover:bg-blue-600 active:scale-95'} text-white`}
+                onClick={() => copyToClipboard('npm i hooks-kit')}
+            >
+                {isCopied ? '✅ Copied!' : '📋 Copy'}
+            </button>
+        </section>
+    );
+}
+
 function App() {
     return (
         <div className="bg-neutral-950 min-h-svh border-[1.5rem] border-zinc-900 antialiased text-zinc-300 px-4 pt-8">
             <Header />
-            <Container>
-                <div className="flex flex-col gap-4 justify-start items-start mt-6">
-                    <HighlightedText as="p" className="max-w-2xl">
-                        Hooks let you use different React features from your
-                        components. You can either use the built-in Hooks or
-                        combine them to build your own.
+            <Container className="pt-12">
+                <div className="flex items-center flex-col justify-center">
+                    <HighlightedText
+                        as="p"
+                        className="max-w-xl text-3xl text-center font-bold"
+                    >
+                        <span className="text-blue-400">Hooks</span> let you use
+                        different <span className="text-blue-400">React</span>{' '}
+                        features to enhance your components.
                     </HighlightedText>
-                    <HighlightedText as="p" className="max-w-2xl">
+                    <span className="pt-6 opacity-50 text-zinc-200 hover:text-white hover:opacity-100 transition">
+                        You can either use the built-in Hooks or combine them to
+                        build your own.
+                    </span>
+                    <NpmCommand />
+                    <HighlightedText
+                        as="p"
+                        className="max-w-md text-center text-sm opacity-40 hover:opacity-80 transition"
+                    >
                         This library provides a set of custom React hooks
                         designed to simplify common tasks and enhance your
                         development experience.

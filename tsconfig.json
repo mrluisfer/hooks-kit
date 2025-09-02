@@ -52,5 +52,6 @@
         "/index.html",
         "/vite.config.js",
         "/tailwind.config.js"
-    ]
+    ],
+    "include": ["./src"]
 }
