@@ -116,7 +116,7 @@ function NpmCommand() {
     const command = 'npm i hooks-kit';
 
     return (
-        <section className="w-full max-w-3xl my-8">
+        <section className="w-full max-w-lg my-8">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 bg-zinc-800/80 rounded-xl ring-1 ring-zinc-700/50">
                 <div className="flex items-center gap-3 min-w-0">
                     <span className="text-2xl font-mono text-blue-400 select-none">
